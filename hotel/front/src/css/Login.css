@@ -1,0 +1,163 @@
+
+
+/* ============================================================================= Login Container */
+
+.login-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:80vh;
+    padding-top:30px;
+    padding-bottom:30px;
+    
+  }
+  
+  .login-wrapper{display:flex; width:100%; justify-content:space-around; min-height:30vh;}
+  
+  .login-wrapper > div {width:50%; display:flex; align-items:center; flex-direction:column;}
+  
+  .login-wrapper > div:first-of-type {padding:20px;}
+  
+  .img-wrapper > img{height:100%; width: 95%; border-radius:10px;}
+  
+  .login-wrapper  form{
+    padding-top:20px;
+    width:50%;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+  }
+  
+  .input-wrapper input::placeholder {
+     /* Change placeholder color as desired */
+    font-weight:500;
+  }
+  
+  
+  input {
+    border: none;
+    border-radius: 5px;
+    background: #00000012;
+    padding: 11px;
+    width:100%;
+    color: black;
+    font-size:16px;
+  }
+  
+  .btn{
+    border: 2px solid black;
+    border-radius: 5px;
+    background: transparent;
+    padding: 11px;
+    width:100%;
+    color: black;
+    font-size:16px;
+  }
+  
+  .login-wrapper form input:not([type="submit"]){
+    padding-left:35px;
+  }
+  
+  
+  
+  
+  .login-wrapper form .input-wrapper{
+    position:relative;
+  }
+  
+  
+  .login-wrapper form  .input-wrapper::after{
+    position: absolute;
+    width:auto;
+    height:auto;
+    font-family: 'Font Awesome 6 Free';
+    font-size:18px;
+    top:15%;
+    left:10px;
+    color:black;
+    z-index:9999999;
+  }
+  
+  
+  .login-wrapper form  .input-wrapper:first-of-type::after{
+    content:"\f007";
+  }
+  
+  .login-wrapper form  .input-wrapper:nth-child(2):after{
+    content:"\f023";
+  }
+
+
+  .hr-text {
+    text-align: center;
+    position: relative;
+  }
+  
+  .hr-text::after,
+  .hr-text::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: calc(50% - 50px); /* Adjust the width of the lines */
+    height: 0.8px; /* Adjust the thickness of the lines */
+    background: black;
+  }
+  
+  .hr-text::after {
+    left: calc(50% + 70px); /* Position the right line */
+  }
+  
+  .hr-text::before {
+    right: calc(50% + 70px); /* Position the left line */
+  }
+
+  [data-value="1"]::after{
+    content:"\f007" !important;
+  }
+
+  [data-value="2"]::after{
+    content:"\f0e0" !important;
+  }
+
+
+  [data-value="3"]::after{
+    content:"\f095" !important;
+  }
+
+  [data-value="4"]::after{
+    content:"\f023" !important;
+  }
+
+  [data-value="5"]::after{
+    content:"\f023" !important;
+  }
+
+  .error{
+    background:red;
+    margin-top:20px;
+    display:inline-block;
+    color:white;
+    padding:10px;
+    border-radius:3.5px;
+    width:40%;
+    margin-bottom:30px;
+  }
+
+  .error p{display:inline; vertical-align:middle;}
+
+  .success{ background:green;
+    margin-bottom:30px;
+    display:inline-block;
+    color:white;
+    padding:10px;
+    border-radius:3.5px;
+    width:40%;}
+
+    .success p{display:inline; vertical-align:middle;}
+
+
+  @media(max-width:950px){
+    .login-wrapper > div{width:100%;}
+    .login-wrapper > div:nth-child(2){display:none;}
+  }
+  

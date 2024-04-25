@@ -1,0 +1,134 @@
+.w-25{width:25%!important;} .w-50{width:50% !important;} .w-75{width:75% !important;}  .w-100{width:100% !important}
+
+.d-flex{display:flex  !important} .justify-content-center{justify-content:center;} .align-items-center{align-items:center;}
+
+
+body , *{
+  margin:0px;
+  padding:0px;
+  box-sizing:border-box;
+}
+
+nav{background:white; color:black; height:100%; padding:7px; box-shadow:2px 5px 10px 0.5px #00000017}
+
+.Results{min-height:70vh;}
+
+.navbar li {
+  color:#212529e0;
+}
+
+li:hover{
+  color:var(--main-color);
+}
+
+ul{gap:30px;}
+
+ul.items > li:last-child{margin-right:5%;}
+
+ul.user-section{margin-right:30px}
+
+#root{background-color: #eff2f6;}
+
+.content-A{min-height: 80vh; width:100%; position:relative;}
+
+.cover{height:100%;
+       width:100%;
+       position:absolute;
+       top:0px;
+       background:url("../public/cover.jpg");
+       background-size:cover;
+       background-position:100%;
+       background-repeat:no-repeat;
+       filter:brightness(0.2)}
+
+.content{height:100%; position:absolute; top:0px; z-index:55555555; gap:15px;}
+
+.content h2 {
+  font-size:70px;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.content p{color:var(--light-grey)}
+
+.search > div{display:flex; flex-direction:column;}
+
+.search  {gap:5%;}
+
+.search  input, select{height:40px;  background:white; color:black; border-radius:3px; border:none; }
+.search  input[type="date"] , select{padding:12px;}
+
+.search  input[type="submit"]{background:var(--main-color); color:white;  border-radius:12px; position: relative;}
+
+.search input[type="date" ] {
+width:200px;
+}
+input[type="submit"]{width:100px; padding:0px 10px 0px 10px;}
+
+select {
+  width:100px;
+  }
+
+.search input[type="date"]::-webkit-calendar-picker-indicator {
+  filter:opacity(0);
+  z-index:99999;
+  width:25px;
+  height:25px;
+  cursor:pointer;
+  position: absolute; /* Position the icon relative to the input */
+  top: 0%; /* Center the icon vertically */
+  right: 0px; 
+}
+
+.search input[type="date"]{position:relative;}
+
+.search input::after {
+  content: '\f073 '; /* Create an empty pseudo-element */
+  font-family: 'Font Awesome 5 Free';
+  width: 25px; /* Set the width and height of the custom icon */
+  height: 25px;
+  color:var(--main-color);
+  cursor:pointer;
+  position: absolute; /* Position the icon relative to the input */
+  top: 0%; /* Center the icon vertically */
+  right: 0px; /* Adjust the positioning of the icon */
+
+}
+
+
+
+
+
+
+.gallery {min-height:35vh; height:35vh; position:relative; overflow:hidden; cursor:pointer; }
+.galeery > img {position:absolute; top:0px; transition:0.4s ease-in-out; overflow:hidden;}
+
+.gallery>img:hover {
+  transform:scale(1.3);
+  filter:brightness(0.7);
+}
+
+.gallery > i{
+  z-index:9999999999999;
+  position:absolute;
+  top:12px;
+  right:12px;
+  cursor:pointer;
+  color:white;
+  transform:scale(1.3);
+
+}
+
+.hotel-info{padding:15px 7px 15px 7px;}
+
+.hotel-info span{color:#6c757d; font-size:15px; font-weight:400}
+
+.Results > div{
+  width:20%  !important;
+}
+
+
+
+
+

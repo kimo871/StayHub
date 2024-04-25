@@ -1,0 +1,22 @@
+div.footer{
+    padding:30px;
+    background:#0a0578;
+    color:#ffffffe6;
+    word-spacing:5px;
+}
+
+div.footer > div{ width:25%; gap:5px; display:flex; flex-direction:column; }
+
+
+div.footer form > div:first-of-type{width:75%}
+div.footer form > div:last-of-type{width:25%}
+
+
+li{color:white}
+
+div.footer input{background:white;}
+
+
+@media(max-width:950px){
+    div.footer > div {width:90%}
+}
