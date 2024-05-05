@@ -1,0 +1,23 @@
+[data-value="1"]::after{
+    content:"\f007" !important;
+  }
+
+  [data-value="2"]::after{
+    content:"\f0e0" !important;
+  }
+
+
+  [data-value="3"]::after{
+    content:"\f095" !important;
+    font-weight: 800; /* Solid font weight */
+  }
+
+  [data-value="4"]::after{
+    content:"\f023" !important;
+    font-weight: 800; /* Solid font weight */
+  }
+
+  [data-value="5"]::after{
+    content:"\f023" !important;
+    font-weight: 800; /* Solid font weight */
+  }

@@ -16,9 +16,26 @@ export const hotels_reducer = (state:any,action:any)=>{
     console.log("bro")
     switch(action.type){
       case "ADD_HOTELS" :{
-    
-         console.log(action.payload);
-         return action.payload.data.hotels;
+         console.log(action.payload,"mm");
+         return action.payload.hotels;
+      }
+
+      case "HOTEL_DETAILS":{
+        return new Array(action.payload.hotel);
+      }
+      default : {
+       return state;
+      }
+    }
+ }
+
+ // ===============================================================================================================
+
+ export const countries_reducer = (state:any,action:any)=>{
+    switch(action.type){
+      case "ADD_COUNTRIES" :{
+         console.log(action.payload,"mm");
+         return new Map(action.payload.countries.map((item:any)=>[item.code,item]));
       }
       default : {
        return state;
@@ -119,7 +136,7 @@ export const success_reducer = (state:any,action:any)=>{
 // ===============================================================================================================
 
 
-export const rootReducer = combineReducers({Results:hotels_reducer,Success:success_reducer ,Errors:errors_reducer,User:user_reducer , isAuthenticated:authentication_reducer});
+export const rootReducer = combineReducers({Countries:countries_reducer,Results:hotels_reducer,Success:success_reducer ,Errors:errors_reducer,User:user_reducer , isAuthenticated:authentication_reducer});
 
 // ===============================================================================================================
 

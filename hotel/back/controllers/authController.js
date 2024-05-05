@@ -3,11 +3,12 @@ const Customer = require('../models/customer');
 const jwt = require('jsonwebtoken');
 const path = require("path");
 const bcrypt = require('bcryptjs');
+const {cookie_secret} = require('../keys');
 
 const maxAge = 1 * 24 * 60 * 60;
 
 const create_token = (id) => {
-    const token = jwt.sign({id}, 'increaseupto1', {
+    const token = jwt.sign({id}, cookie_secret, {
         expiresIn: maxAge
     })
     return token;

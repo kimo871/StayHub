@@ -97,6 +97,12 @@ div.mobile-menu > ul  li{
     color:white !important;
 }
 
+.fixed{
+    position:fixed;
+    top:0px;
+    height:fit-content;
+}
+
 
 
 

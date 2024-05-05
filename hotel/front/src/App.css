@@ -84,8 +84,8 @@ select {
 .search input[type="date"]{position:relative;}
 
 .search input::after {
-  content: '\f073 '; /* Create an empty pseudo-element */
-  font-family: 'Font Awesome 5 Free';
+  content: '\f3c5 '; /* Create an empty pseudo-element */
+  font-family: 'Font Awesome 6 Free';
   width: 25px; /* Set the width and height of the custom icon */
   height: 25px;
   color:var(--main-color);
@@ -93,6 +93,12 @@ select {
   position: absolute; /* Position the icon relative to the input */
   top: 0%; /* Center the icon vertically */
   right: 0px; /* Adjust the positioning of the icon */
+
+}
+
+.search input:nth-child(2)::after , .search input:nth-child(3)::after {
+  content: '\f133 '!important; /* Create an empty pseudo-element */
+ 
 
 }
 

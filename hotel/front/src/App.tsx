@@ -14,6 +14,7 @@ import Account from './Account.tsx'
 import Personal from './Personal.tsx'
 import Security  from "./Security.tsx" 
 import { dataMiddleware , rootReducer} from './Reducers.ts'
+import HotelDetails from './HotelDetails.tsx'
 
 interface user {
   status: string // Define the status property if it's optional
@@ -23,8 +24,12 @@ interface user {
 }
 
  let inital : user={email:"",name:"",status:"",type:""};
-
+interface country {
+description:{content:string}
+}
 interface GlobalState {
+  Countries:Map<string,country>,
+  Cities:Map<string,object>,
   Results: any[]; // Define the type of Results according to your use case
   Success: any[]; // Define the type of Success according to your use case
   Errors: any[]; // Define the type of Errors according to your use case
@@ -33,6 +38,8 @@ interface GlobalState {
 }
 
 const globalState = {
+  Countries:new Map<string,country>(),
+  Cities:new Map<string,object>(),
   Results: [],
   Success:[],
   Errors:[],
@@ -87,6 +94,8 @@ let [state,dispatch] = applyMiddleware(rootReducer, globalState,dataMiddleware);
         <Route path="payment" element={<Verify/>}/>
         <Route path="wishlist" element={<Verify/>}/>
         </Route>
+
+        <Route path="/hotel/:id" element={<HotelDetails/>}/>
 
     <Route path="*" element={<Invalid/>}/>
 

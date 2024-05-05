@@ -1,6 +1,6 @@
 import Nav from './Nav.tsx'
 import Footer from './Footer.tsx'
-import './css/Login.css'
+import './css/signup.css'
 import './css/helper.css'
 import {useRef,useContext,useEffect} from 'react'
 import {Shared} from './App.tsx'

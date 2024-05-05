@@ -54,13 +54,13 @@ const check_otp = async (req, res) => {
     if(customer.otp_expiry >= now){
         if(customer.otp == otp) {
             const newCustomer = await Customer.findByIdAndUpdate(id, {$set: {status: 'verified'}});
-            res.status(200).json({"success":["Your Email is Verified !"]});
+           return  res.status(200).json({"success":["Your Email is Verified !"]});
         }
         else
-            res.status(400).json({'errors': ['Incorrect otp']});
+            return res.status(400).json({'errors': ['Incorrect otp']});
     }
     else
-        res.status(400).json({'errors': ['otp time expired']});
+       return  res.status(400).json({'errors': ['otp time expired']});
 }
 
 module.exports = {

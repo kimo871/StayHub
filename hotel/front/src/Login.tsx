@@ -71,9 +71,14 @@ const Login = ()=> {
             )}
             
              <form onSubmit={formHandle}  method="POST" className="login">
-              <div  className="input-wrapper"><input ref={username} placeholder="email" type="text" name="email"/></div> 
-               <div className="input-wrapper"><input ref={password} placeholder="password" type="password" name="password"/></div>
+              <div  className="input-wrapper"><input ref={username} placeholder="email" type="text" name="email"/>
+             
+              </div> 
+               <div className="input-wrapper"><input ref={password} placeholder="password" type="password" name="password"/>
+               
+               </div>
                <div className="input-wrapper"><input  type="submit" value="Login"/></div>
+               <a href="">Forgot Password?</a>
                 <div className="hr-text">Login To Others</div>
                <center><button type="button" className="btn"><a href="/auth/google"> <i className="fa-brands fa-google"></i> &nbsp; Login with google </a></button></center>
          

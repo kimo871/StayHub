@@ -1,6 +1,7 @@
 const express = require('express');
 const controller = require('../controllers/authController');
 const authMiddleware = require('../Middleware/authMiddleware');
+const otpController= require('../controllers/otpController');
 const passport = require('passport');
 const router = express.Router();
 
@@ -14,7 +15,6 @@ router.post('/update', authMiddleware.check_user, controller.updateCustomer);
 router.get('/logout', controller.logout);
 router.get('/google', passport.authenticate('google', { scope: ['profile', 'email'], prompt: 'consent' }));
 router.get('/google/redirect',(req,res,next)=>{console.log(req.session); next()},passport.authenticate('google'), (req, res) => {
-    
     res.redirect('/');
 });
 
